@@ -28,7 +28,7 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
 
   tags {
-    NAME = "terraform-example"
+    Name = "terraform-example"
   }
 
   user_data = <<-EOF
