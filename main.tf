@@ -32,7 +32,7 @@ resource "aws_instance" "example" {
     Name = "terraform-sachin-example"
   }
 
-  user_data = <<EOF
+  user_data = <<-EOF
               #!/bin/bash
               echo "Hello, World" > index.html
               nohup busybox httpd -f -p "${var.server_port}" &
