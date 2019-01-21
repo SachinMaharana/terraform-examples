@@ -22,7 +22,7 @@ resource "aws_security_group" "instance" {
   }
 }
 
-resource "aws_instance" "sachin" {
+resource "aws_instance" "example" {
   ami           = "ami-40d28157"
   instance_type = "t1.micro"
 
@@ -38,3 +38,6 @@ resource "aws_instance" "sachin" {
               nohup busybox httpd -f -p "${var.server_port}" &
               EOF
 }
+
+# resource "aws_launch_configuration" "example" {}
+
