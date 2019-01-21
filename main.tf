@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 output "public_ip" {
-  value = "${aws_instance.sachin.public_ip}"
+  value = "${aws_instance.example.public_ip}"
 }
 
 variable "server_port" {
@@ -23,7 +23,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-40d28157"
+  ami           = "ami-33dbd459"
   instance_type = "t1.micro"
 
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
